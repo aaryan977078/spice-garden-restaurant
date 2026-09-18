@@ -3,16 +3,351 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Spice Garden Restaurant - Fresh Indian food, fast service and easy WhatsApp ordering.">
-  <title>Spice Garden Restaurant</title>
-  <link rel="stylesheet" href="style.css">
+
+  <meta name="description"
+    content="Braj Restaurant, Agra Mohalla, Panna - 100% Pure Vegetarian Restaurant. Fresh food, hygienic kitchen and clean dining.">
+
+  <meta name="keywords"
+    content="Braj Restaurant Panna, restaurant in Panna, veg restaurant Panna, food Panna">
+
+  <title>Braj Restaurant | Panna</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff8ef;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #15100d;
+      padding: 18px 6%;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: #f39a22;
+    }
+
+    .links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .links a:hover {
+      color: #f39a22;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(rgba(0,0,0,0.63), rgba(0,0,0,0.63)),
+        linear-gradient(135deg, #4b2a16, #15100d);
+      color: white;
+      padding: 70px 7%;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .tag {
+      color: #f39a22;
+      letter-spacing: 4px;
+      font-weight: bold;
+      font-size: 17px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 9vw, 82px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #f39a22;
+    }
+
+    .hero p {
+      font-size: 21px;
+      color: #f1f1f1;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background: #f39a22;
+      color: #111;
+    }
+
+    .btn-secondary {
+      border: 2px solid white;
+      color: white;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 6%;
+    }
+
+    .section-tag {
+      color: #d8891b;
+      letter-spacing: 4px;
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: clamp(36px, 6vw, 55px);
+      margin-bottom: 40px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .dish {
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+      border: 1px solid #eee;
+    }
+
+    .dish-icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .dish h3 {
+      font-size: 25px;
+      margin-bottom: 5px;
+    }
+
+    .dish p {
+      color: #777;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      color: #d77c10;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .about {
+      background: #15100d;
+      color: white;
+      max-width: none;
+    }
+
+    .about-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 6%;
+    }
+
+    .about h2 {
+      margin-bottom: 20px;
+    }
+
+    .about-text {
+      font-size: 20px;
+      color: #ddd;
+      max-width: 850px;
+      margin-bottom: 35px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .feature {
+      padding: 25px;
+      background: #211914;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .feature-icon {
+      font-size: 35px;
+      margin-bottom: 8px;
+    }
+
+    .feature h3 {
+      font-size: 20px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-info {
+      font-size: 20px;
+      margin: 15px 0;
+    }
+
+    .whatsapp {
+      display: inline-block;
+      margin-top: 20px;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 12px;
+      font-size: 19px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #15100d;
+      color: #ccc;
+      text-align: center;
+      padding: 25px;
+    }
+
+    footer strong {
+      color: #f39a22;
+    }
+
+    @media (max-width: 700px) {
+
+      header {
+        padding: 16px 5%;
+      }
+
+      .logo {
+        font-size: 27px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #15100d;
+        flex-direction: column;
+        padding: 20px 30px;
+        gap: 18px;
+      }
+
+      .links.active {
+        display: flex;
+      }
+
+      .hero {
+        min-height: 78vh;
+        padding: 60px 6%;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 65px 6%;
+      }
+    }
+  </style>
 </head>
+
 <body>
+
+  <!-- HEADER -->
   <header>
-    <nav class="nav">
-      <a class="logo" href="#home">Spice<span>Garden</span></a>
-      <button class="menu-btn" aria-label="Open menu">☰</button>
-      <div class="links">
+    <nav>
+      <a href="#home" class="logo">
+        Braj<span>Restaurant</span>
+      </a>
+
+      <button class="menu-btn" onclick="toggleMenu()">
+        ☰
+      </button>
+
+      <div class="links" id="navLinks">
         <a href="#home">Home</a>
         <a href="#menu">Menu</a>
         <a href="#about">About</a>
@@ -21,53 +356,213 @@
     </nav>
   </header>
 
+
+  <!-- HERO -->
   <main>
+
     <section id="home" class="hero">
       <div class="hero-content">
-        <p class="tag">WELCOME TO SPICE GARDEN</p>
-        <h1>स्वाद जो<br><span>याद रह जाए</span></h1>
-        <p>Fresh Indian flavours, delicious meals and a warm family dining experience.</p>
-        <div class="buttons">
-          <a class="btn primary" href="#menu">View Menu</a>
-          <a class="btn secondary" href="https://wa.me/919999999999?text=Hello%20Spice%20Garden%2C%20I%20want%20to%20place%20an%20order." target="_blank">Order on WhatsApp</a>
+
+        <div class="tag">
+          WELCOME TO BRAJ RESTAURANT
         </div>
+
+        <h1>
+          स्वाद जो<br>
+          <span>याद रह जाए</span>
+        </h1>
+
+        <p>
+          स्वादिष्ट शाकाहारी भोजन, साफ-सफाई और परिवार के साथ
+          खाने का बेहतरीन अनुभव।
+        </p>
+
+        <div class="buttons">
+          <a href="#menu" class="btn btn-primary">
+            हमारा मेनू
+          </a>
+
+          <a href="https://wa.me/917999598093"
+             class="btn btn-secondary">
+            WhatsApp पर Order करें
+          </a>
+        </div>
+
       </div>
     </section>
 
-    <section id="menu" class="section">
-      <p class="tag">OUR MENU</p>
+
+    <!-- MENU -->
+    <section id="menu">
+
+      <div class="section-tag">OUR MENU</div>
+
       <h2>Popular Dishes</h2>
-      <div class="cards">
-        <article class="card"><div class="food">🍛</div><h3>Paneer Butter Masala</h3><p>Creamy tomato gravy with soft paneer.</p><strong>₹220</strong></article>
-        <article class="card"><div class="food">🍕</div><h3>Veg Pizza</h3><p>Cheesy pizza loaded with fresh vegetables.</p><strong>₹199</strong></article>
-        <article class="card"><div class="food">🍜</div><h3>Veg Hakka Noodles</h3><p>Wok-tossed noodles with crunchy vegetables.</p><strong>₹160</strong></article>
-        <article class="card"><div class="food">🥘</div><h3>Dal Tadka</h3><p>Comforting dal finished with a fragrant tadka.</p><strong>₹140</strong></article>
-        <article class="card"><div class="food">🥤</div><h3>Cold Coffee</h3><p>Chilled, creamy and refreshing.</p><strong>₹110</strong></article>
-        <article class="card"><div class="food">🍨</div><h3>Gulab Jamun</h3><p>Soft warm dumplings in sweet syrup.</p><strong>₹90</strong></article>
+
+      <div class="menu-grid">
+
+        <div class="dish">
+          <div class="dish-icon">🍚</div>
+          <h3>Veg Biryani</h3>
+          <p>स्वादिष्ट और मसालेदार वेज बिरयानी।</p>
+          <div class="price">
+            Half ₹40 &nbsp; | &nbsp; Full ₹70
+          </div>
+        </div>
+
+        <div class="dish">
+          <div class="dish-icon">🍕</div>
+          <h3>Paneer Pizza</h3>
+          <p>Cheesy pizza loaded with delicious paneer.</p>
+          <div class="price">₹220</div>
+        </div>
+
+        <div class="dish">
+          <div class="dish-icon">🍕</div>
+          <h3>Veg Loaded Pizza</h3>
+          <p>Fresh vegetables और cheese से loaded pizza.</p>
+          <div class="price">₹199</div>
+        </div>
+
+        <div class="dish">
+          <div class="dish-icon">🍕</div>
+          <h3>Onion Pizza</h3>
+          <p>Fresh onion और cheesy topping वाला pizza.</p>
+          <div class="price">₹189</div>
+        </div>
+
+        <div class="dish">
+          <div class="dish-icon">🍕</div>
+          <h3>Extra Paneer Cheese Pizza</h3>
+          <p>Extra paneer और extra cheese के साथ।</p>
+          <div class="price">₹259</div>
+        </div>
+
+        <div class="dish">
+          <div class="dish-icon">🍜</div>
+          <h3>Hakka Noodles</h3>
+          <p>Fresh vegetables के साथ tasty Hakka noodles.</p>
+          <div class="price">₹80</div>
+        </div>
+
+        <div class="dish">
+          <div class="dish-icon">🥞</div>
+          <h3>Dhosa</h3>
+          <p>Crispy और delicious South Indian dosa.</p>
+          <div class="price">₹70</div>
+        </div>
+
+        <div class="dish">
+          <div class="dish-icon">🍛</div>
+          <h3>Chole Bhature</h3>
+          <p>Hot और tasty chole bhature.</p>
+          <div class="price">₹49</div>
+        </div>
+
+        <div class="dish">
+          <div class="dish-icon">🥪</div>
+          <h3>Cheese Grilled Sandwich</h3>
+          <p>Grilled sandwich with delicious cheese.</p>
+          <div class="price">₹89</div>
+        </div>
+
       </div>
     </section>
 
-    <section id="about" class="about section">
-      <div>
-        <p class="tag">ABOUT US</p>
-        <h2>Good food. Good mood.</h2>
-        <p>Spice Garden is a demo restaurant website designed for a modern Indian restaurant. Replace this text with the restaurant's real story, timings and specialities.</p>
-        <div class="info"><span>🕐</span><div><b>Opening Hours</b><br>11:00 AM – 11:00 PM</div></div>
-        <div class="info"><span>📍</span><div><b>Location</b><br>Your City, Madhya Pradesh</div></div>
-      </div>
-      <div class="about-box">🍽️<br><b>Freshly prepared</b><br>Every day</div>
-    </section>
 
-    <section id="contact" class="section contact">
-      <p class="tag">CONTACT</p>
+    <!-- ABOUT -->
+    <div id="about" class="about">
+
+      <div class="about-inner">
+
+        <div class="section-tag">ABOUT US</div>
+
+        <h2>Good Food. Good Mood.</h2>
+
+        <p class="about-text">
+          Braj Restaurant में आपको स्वादिष्ट और शुद्ध शाकाहारी
+          भोजन के साथ साफ-सुथरा और comfortable dining experience
+          देने की कोशिश की जाती है।
+        </p>
+
+        <div class="features">
+
+          <div class="feature">
+            <div class="feature-icon">💯</div>
+            <h3>100% Pure Vegetarian</h3>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">🧼</div>
+            <h3>High Hygiene</h3>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">✨</div>
+            <h3>Clean Tables & Kitchen</h3>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+
+      <div class="section-tag">CONTACT</div>
+
       <h2>Visit or Order Today</h2>
-      <p>📞 +91 99999 99999</p>
-      <p>📍 Your Restaurant Address, Your City, MP</p>
-      <a class="btn primary" href="https://wa.me/919999999999?text=Hello%20Spice%20Garden%2C%20I%20want%20to%20place%20an%20order." target="_blank">WhatsApp Us</a>
+
+      <div class="contact-info">
+        📞 <strong>7999598093</strong>
+      </div>
+
+      <div class="contact-info">
+        📍 Agra Mohalla, Panna, Madhya Pradesh
+      </div>
+
+      <div class="contact-info">
+        🕙 Daily: 10:00 AM – 11:00 PM
+      </div>
+
+      <a href="tel:+917999598093"
+         class="btn btn-primary">
+        📞 Call Now
+      </a>
+
+      <br>
+
+      <a href="https://wa.me/917999598093"
+         class="whatsapp">
+        💬 WhatsApp Us
+      </a>
+
     </section>
+
   </main>
 
-  <footer>© 2026 Spice Garden Restaurant · Demo Website</footer>
-  <script src="script.js"></script>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 <strong>Braj Restaurant</strong> — Panna, Madhya Pradesh
+  </footer>
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks")
+        .classList.toggle("active");
+    }
+
+    document.querySelectorAll(".links a").forEach(function(link) {
+      link.addEventListener("click", function() {
+        document.getElementById("navLinks")
+          .classList.remove("active");
+      });
+    });
+  </script>
+
 </body>
-</html>
+  </html>
