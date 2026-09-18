@@ -4,93 +4,76 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Braj Restaurant | Panna</title>
-<meta name="description" content="Braj Restaurant, Agra Mohalla Panna - Pure Vegetarian Restaurant. Order delicious food on WhatsApp.">
+<title>Braj Restaurant | Online Order</title>
+
+<meta name="description"
+content="Braj Restaurant Panna - Pure Vegetarian Restaurant. Order Pizza, Biryani, Noodles, Dosa and more online.">
 
 <style>
 *{
+  box-sizing:border-box;
   margin:0;
   padding:0;
-  box-sizing:border-box;
   scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial, sans-serif;
+  font-family:Arial,sans-serif;
   background:#fffaf3;
   color:#292929;
-  line-height:1.6;
 }
 
 header{
   position:sticky;
   top:0;
-  z-index:1000;
+  z-index:999;
   background:#fff;
-  box-shadow:0 2px 15px rgba(0,0,0,.10);
+  box-shadow:0 2px 15px rgba(0,0,0,.12);
 }
 
-.navbar{
+.nav{
   max-width:1150px;
   margin:auto;
-  padding:15px 20px;
+  padding:14px 18px;
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
 
 .logo{
-  font-size:25px;
+  font-size:24px;
   font-weight:800;
-  color:#c62828;
+  color:#a51d1d;
 }
 
 .logo span{
   color:#f57c00;
 }
 
-nav a{
+.nav a{
+  margin-left:18px;
   text-decoration:none;
   color:#333;
-  margin-left:22px;
-  font-weight:600;
+  font-weight:bold;
 }
 
-nav a:hover{
-  color:#d84315;
+.cart-top{
+  background:#a51d1d;
+  color:white !important;
+  padding:9px 15px;
+  border-radius:25px;
 }
 
 .hero{
-  min-height:88vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
   text-align:center;
-  padding:40px 20px;
-  background:
-  radial-gradient(circle at top,#fff0cf,#fffaf3 55%);
-}
-
-.hero-content{
-  max-width:800px;
-}
-
-.badge{
-  display:inline-block;
-  background:#fff;
-  color:#16833b;
-  padding:8px 18px;
-  border-radius:30px;
-  font-weight:bold;
-  box-shadow:0 4px 15px rgba(0,0,0,.08);
-  margin-bottom:20px;
+  padding:80px 20px;
+  background:linear-gradient(135deg,#fff0d0,#fffaf3);
 }
 
 .hero h1{
-  font-size:55px;
-  line-height:1.1;
+  font-size:48px;
   color:#9e1b1b;
-  margin-bottom:18px;
+  margin-bottom:12px;
 }
 
 .hero h1 span{
@@ -98,49 +81,36 @@ nav a:hover{
 }
 
 .hero p{
-  font-size:20px;
   color:#555;
-  margin-bottom:30px;
-}
-
-.buttons{
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  flex-wrap:wrap;
+  font-size:18px;
+  margin-bottom:25px;
 }
 
 .btn{
   display:inline-block;
-  padding:13px 25px;
-  border-radius:30px;
+  border:none;
+  padding:13px 22px;
+  border-radius:28px;
   text-decoration:none;
   font-weight:bold;
-  transition:.3s;
+  cursor:pointer;
+  font-size:15px;
 }
 
-.btn-primary{
-  background:#c62828;
-  color:#fff;
-}
-
-.btn-primary:hover{
-  background:#9e1b1b;
-  transform:translateY(-2px);
-}
-
-.btn-whatsapp{
-  background:#20a94b;
+.btn-red{
+  background:#a51d1d;
   color:white;
 }
 
-.btn-whatsapp:hover{
-  background:#16833b;
-  transform:translateY(-2px);
+.btn-green{
+  background:#1fa64a;
+  color:white;
 }
 
+/* MENU */
+
 section{
-  padding:75px 20px;
+  padding:65px 18px;
 }
 
 .container{
@@ -148,190 +118,243 @@ section{
   margin:auto;
 }
 
-.section-title{
+.title{
   text-align:center;
-  margin-bottom:45px;
+  margin-bottom:35px;
 }
 
-.section-title h2{
-  font-size:36px;
+.title h2{
+  color:#9e1b1b;
+  font-size:34px;
+}
+
+.title p{
+  color:#666;
+  margin-top:5px;
+}
+
+.menu{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.item{
+  background:white;
+  border-radius:18px;
+  padding:22px;
+  box-shadow:0 7px 20px rgba(0,0,0,.08);
+}
+
+.food{
+  font-size:45px;
+  text-align:center;
+  margin-bottom:8px;
+}
+
+.item h3{
+  text-align:center;
+  margin-bottom:5px;
+}
+
+.price{
+  text-align:center;
+  color:#d84315;
+  font-weight:bold;
+  margin-bottom:14px;
+}
+
+.add{
+  width:100%;
+  border:none;
+  background:#a51d1d;
+  color:white;
+  padding:11px;
+  border-radius:25px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.add:hover{
+  background:#7e1111;
+}
+
+/* CART */
+
+.cart-section{
+  background:#fff;
+}
+
+.cart-box{
+  max-width:850px;
+  margin:auto;
+  background:white;
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,.09);
+}
+
+.cart-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  padding:14px 0;
+  border-bottom:1px solid #eee;
+}
+
+.cart-name{
+  font-weight:bold;
+  flex:1;
+}
+
+.qty{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.qty button{
+  width:34px;
+  height:34px;
+  border:none;
+  border-radius:50%;
+  background:#a51d1d;
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+}
+
+.total{
+  margin-top:20px;
+  padding-top:15px;
+  border-top:2px solid #a51d1d;
+  text-align:right;
+}
+
+.total h2{
+  color:#a51d1d;
+}
+
+.empty{
+  text-align:center;
+  color:#777;
+  padding:20px;
+}
+
+/* FORM */
+
+.order-form{
+  margin-top:25px;
+  display:grid;
+  gap:13px;
+}
+
+.order-form input,
+.order-form textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  font-size:16px;
+}
+
+.order-form textarea{
+  min-height:85px;
+  resize:vertical;
+}
+
+.order-btn{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:30px;
+  background:#20a94b;
+  color:white;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* QR */
+
+.qr-section{
+  text-align:center;
+  background:#fff5e5;
+}
+
+.qr-box{
+  background:white;
+  max-width:430px;
+  margin:auto;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+#qrcode{
+  margin:20px auto;
+  width:200px;
+  min-height:200px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.qr-box h3{
   color:#9e1b1b;
   margin-bottom:8px;
 }
 
-.section-title p{
+.qr-box p{
   color:#666;
+  font-size:14px;
 }
 
-/* SPECIAL */
-.specials{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
-  margin-bottom:55px;
-}
-
-.special-card{
-  background:white;
-  border-radius:20px;
-  padding:30px;
-  text-align:center;
-  box-shadow:0 8px 25px rgba(0,0,0,.08);
-}
-
-.special-card .emoji{
-  font-size:55px;
-  margin-bottom:10px;
-}
-
-.special-card h3{
-  color:#9e1b1b;
-  margin-bottom:5px;
-}
-
-/* MENU */
-.menu-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
-}
-
-.menu-card{
-  background:white;
-  border-radius:18px;
-  padding:22px;
-  box-shadow:0 7px 22px rgba(0,0,0,.08);
-  display:flex;
-  align-items:center;
-  gap:16px;
-  transition:.3s;
-}
-
-.menu-card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 12px 28px rgba(0,0,0,.13);
-}
-
-.food-icon{
-  width:62px;
-  height:62px;
-  min-width:62px;
-  border-radius:50%;
-  background:#fff0d5;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:32px;
-}
-
-.menu-info{
-  flex:1;
-}
-
-.menu-info h3{
-  font-size:18px;
-  color:#333;
-}
-
-.price{
-  color:#d84315;
-  font-weight:bold;
-  margin-top:4px;
-}
-
-.order-small{
-  display:inline-block;
-  margin-top:8px;
-  font-size:13px;
-  color:#16833b;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-/* ABOUT */
-.about{
-  background:#fff;
-}
+/* FEATURES */
 
 .features{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:25px;
+  gap:20px;
 }
 
 .feature{
+  background:white;
   text-align:center;
-  padding:30px 20px;
+  padding:28px;
   border-radius:18px;
-  background:#fffaf3;
+  box-shadow:0 6px 18px rgba(0,0,0,.07);
 }
 
 .feature-icon{
-  font-size:45px;
-  margin-bottom:12px;
+  font-size:42px;
+  margin-bottom:10px;
 }
 
 .feature h3{
   color:#9e1b1b;
-  margin-bottom:8px;
-}
-
-/* CONTACT */
-.contact-box{
-  background:linear-gradient(135deg,#9e1b1b,#d84315);
-  color:white;
-  border-radius:25px;
-  padding:45px 30px;
-  text-align:center;
-  max-width:850px;
-  margin:auto;
-  box-shadow:0 15px 35px rgba(0,0,0,.15);
-}
-
-.contact-box h2{
-  font-size:35px;
-  margin-bottom:20px;
-}
-
-.contact-details{
-  margin:20px 0 30px;
-  font-size:17px;
-}
-
-.contact-details div{
-  margin:8px 0;
-}
-
-.contact-box .btn-primary{
-  background:white;
-  color:#9e1b1b;
-}
-
-.contact-box .btn-whatsapp{
-  margin-left:8px;
+  margin-bottom:5px;
 }
 
 /* FOOTER */
+
 footer{
   background:#241b18;
   color:#ddd;
   text-align:center;
-  padding:28px 20px;
+  padding:30px 15px;
 }
 
 footer strong{
   color:white;
 }
 
-footer p{
-  margin:5px 0;
-  font-size:14px;
-}
-
 /* MOBILE */
+
 @media(max-width:850px){
-  .menu-grid,
-  .specials{
+
+  .menu{
     grid-template-columns:repeat(2,1fr);
   }
 
@@ -339,65 +362,41 @@ footer p{
     grid-template-columns:1fr;
   }
 
-  nav a{
-    margin-left:10px;
-    font-size:14px;
+  .nav{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+  }
+
+  .nav a{
+    margin:0 5px;
   }
 
   .hero h1{
-    font-size:42px;
+    font-size:40px;
   }
 }
 
 @media(max-width:600px){
-  .navbar{
-    flex-direction:column;
-    gap:10px;
-  }
 
-  nav{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:8px;
-  }
-
-  nav a{
-    margin:0 5px;
-  }
-
-  .hero{
-    min-height:80vh;
-  }
-
-  .hero h1{
-    font-size:38px;
-  }
-
-  .hero p{
-    font-size:17px;
-  }
-
-  .menu-grid,
-  .specials{
+  .menu{
     grid-template-columns:1fr;
   }
 
+  .hero{
+    padding:60px 15px;
+  }
+
+  .hero h1{
+    font-size:36px;
+  }
+
+  .cart-item{
+    flex-wrap:wrap;
+  }
+
   section{
-    padding:55px 15px;
-  }
-
-  .section-title h2{
-    font-size:30px;
-  }
-
-  .contact-box h2{
-    font-size:28px;
-  }
-
-  .contact-box .btn-whatsapp{
-    margin-left:0;
-    margin-top:10px;
+    padding:50px 14px;
   }
 }
 </style>
@@ -406,179 +405,284 @@ footer p{
 <body>
 
 <header>
-  <div class="navbar">
-    <div class="logo">Braj<span>Restaurant</span> 🍽️</div>
+  <div class="nav">
 
-    <nav>
-      <a href="#home">Home</a>
+    <div class="logo">
+      Braj<span>Restaurant</span> 🍽️
+    </div>
+
+    <div>
       <a href="#menu">Menu</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-content">
-
-    <div class="badge">🌿 100% Pure Vegetarian</div>
-
-    <h1>स्वाद जो <span>याद रह जाए</span></h1>
-
-    <p>
-      स्वादिष्ट खाना, साफ-सफाई और बेहतरीन सेवा —
-      <strong>Braj Restaurant, Panna</strong>
-    </p>
-
-    <div class="buttons">
-      <a href="#menu" class="btn btn-primary">🍽️ हमारा मेनू</a>
-
-      <a href="https://wa.me/917999598093?text=Hello%20Braj%20Restaurant%2C%20mujhe%20food%20order%20karna%20hai."
-         class="btn btn-whatsapp">
-        💬 WhatsApp Order
+      <a href="#cart" class="cart-top">
+        🛒 Cart <span id="cartCount">0</span>
       </a>
     </div>
 
   </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <h1>स्वाद जो <span>याद रह जाए</span></h1>
+
+  <p>
+    100% Pure Vegetarian Restaurant<br>
+    Agra Mohalla, Panna, Madhya Pradesh
+  </p>
+
+  <a href="#menu" class="btn btn-red">
+    🍽️ Order Now
+  </a>
+
 </section>
 
-<!-- SPECIAL -->
-<section>
-  <div class="container">
-
-    <div class="section-title">
-      <h2>⭐ हमारी खासियत</h2>
-      <p>हर बार स्वाद और क्वालिटी का ध्यान</p>
-    </div>
-
-    <div class="specials">
-
-      <div class="special-card">
-        <div class="emoji">🍕</div>
-        <h3>Fresh Pizza</h3>
-        <p>गरमा-गरम और स्वादिष्ट Pizza</p>
-      </div>
-
-      <div class="special-card">
-        <div class="emoji">🍛</div>
-        <h3>Veg Biryani</h3>
-        <p>खुशबूदार और स्वादिष्ट Biryani</p>
-      </div>
-
-      <div class="special-card">
-        <div class="emoji">🥪</div>
-        <h3>Grilled Sandwich</h3>
-        <p>Cheesy और Crispy Sandwich</p>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <!-- MENU -->
+
 <section id="menu">
+
   <div class="container">
 
-    <div class="section-title">
+    <div class="title">
       <h2>🍽️ हमारा मेनू</h2>
-      <p>अपनी पसंद का खाना चुनें और WhatsApp पर Order करें</p>
+      <p>अपनी पसंद का खाना Cart में Add करें</p>
     </div>
 
-    <div class="menu-grid">
+    <div class="menu">
 
-      <div class="menu-card">
-        <div class="food-icon">🍛</div>
-        <div class="menu-info">
-          <h3>Veg Biryani</h3>
-          <div class="price">Half ₹40 | Full ₹70</div>
-          <a class="order-small" href="https://wa.me/917999598093?text=Hello%2C%20mujhe%20Veg%20Biryani%20order%20karni%20hai.">Order →</a>
-        </div>
+
+      <div class="item">
+        <div class="food">🍛</div>
+        <h3>Veg Biryani</h3>
+        <div class="price">Half ₹40 / Full ₹70</div>
+
+        <button class="add"
+          onclick="addItem('Veg Biryani Half',40)">
+          + Add Half ₹40
+        </button>
+
+        <br><br>
+
+        <button class="add"
+          onclick="addItem('Veg Biryani Full',70)">
+          + Add Full ₹70
+        </button>
       </div>
 
-      <div class="menu-card">
-        <div class="food-icon">🍕</div>
-        <div class="menu-info">
-          <h3>Paneer Pizza</h3>
-          <div class="price">₹220</div>
-          <a class="order-small" href="https://wa.me/917999598093?text=Hello%2C%20mujhe%20Paneer%20Pizza%20order%20karna%20hai.">Order →</a>
-        </div>
+
+      <div class="item">
+        <div class="food">🍕</div>
+        <h3>Paneer Pizza</h3>
+        <div class="price">₹220</div>
+
+        <button class="add"
+          onclick="addItem('Paneer Pizza',220)">
+          + Add to Cart
+        </button>
       </div>
 
-      <div class="menu-card">
-        <div class="food-icon">🍕</div>
-        <div class="menu-info">
-          <h3>Veg Loaded Pizza</h3>
-          <div class="price">₹199</div>
-          <a class="order-small" href="https://wa.me/917999598093?text=Hello%2C%20mujhe%20Veg%20Loaded%20Pizza%20order%20karna%20hai.">Order →</a>
-        </div>
+
+      <div class="item">
+        <div class="food">🍕</div>
+        <h3>Veg Loaded Pizza</h3>
+        <div class="price">₹199</div>
+
+        <button class="add"
+          onclick="addItem('Veg Loaded Pizza',199)">
+          + Add to Cart
+        </button>
       </div>
 
-      <div class="menu-card">
-        <div class="food-icon">🍕</div>
-        <div class="menu-info">
-          <h3>Onion Pizza</h3>
-          <div class="price">₹189</div>
-          <a class="order-small" href="https://wa.me/917999598093?text=Hello%2C%20mujhe%20Onion%20Pizza%20order%20karna%20hai.">Order →</a>
-        </div>
+
+      <div class="item">
+        <div class="food">🍕</div>
+        <h3>Onion Pizza</h3>
+        <div class="price">₹189</div>
+
+        <button class="add"
+          onclick="addItem('Onion Pizza',189)">
+          + Add to Cart
+        </button>
       </div>
 
-      <div class="menu-card">
-        <div class="food-icon">🧀</div>
-        <div class="menu-info">
-          <h3>Extra Paneer Cheese Pizza</h3>
-          <div class="price">₹259</div>
-          <a class="order-small" href="https://wa.me/917999598093?text=Hello%2C%20mujhe%20Extra%20Paneer%20Cheese%20Pizza%20order%20karna%20hai.">Order →</a>
-        </div>
+
+      <div class="item">
+        <div class="food">🧀</div>
+        <h3>Extra Paneer Cheese Pizza</h3>
+        <div class="price">₹259</div>
+
+        <button class="add"
+          onclick="addItem('Extra Paneer Cheese Pizza',259)">
+          + Add to Cart
+        </button>
       </div>
 
-      <div class="menu-card">
-        <div class="food-icon">🍜</div>
-        <div class="menu-info">
-          <h3>Hakka Noodles</h3>
-          <div class="price">₹80</div>
-          <a class="order-small" href="https://wa.me/917999598093?text=Hello%2C%20mujhe%20Hakka%20Noodles%20order%20karna%20hai.">Order →</a>
-        </div>
+
+      <div class="item">
+        <div class="food">🍜</div>
+        <h3>Hakka Noodles</h3>
+        <div class="price">₹80</div>
+
+        <button class="add"
+          onclick="addItem('Hakka Noodles',80)">
+          + Add to Cart
+        </button>
       </div>
 
-      <div class="menu-card">
-        <div class="food-icon">🥞</div>
-        <div class="menu-info">
-          <h3>Dhosa</h3>
-          <div class="price">₹70</div>
-          <a class="order-small" href="https://wa.me/917999598093?text=Hello%2C%20mujhe%20Dhosa%20order%20karna%20hai.">Order →</a>
-        </div>
+
+      <div class="item">
+        <div class="food">🥞</div>
+        <h3>Dhosa</h3>
+        <div class="price">₹70</div>
+
+        <button class="add"
+          onclick="addItem('Dhosa',70)">
+          + Add to Cart
+        </button>
       </div>
 
-      <div class="menu-card">
-        <div class="food-icon">🥘</div>
-        <div class="menu-info">
-          <h3>Chole Bhature</h3>
-          <div class="price">₹49</div>
-          <a class="order-small" href="https://wa.me/917999598093?text=Hello%2C%20mujhe%20Chole%20Bhature%20order%20karna%20hai.">Order →</a>
-        </div>
+
+      <div class="item">
+        <div class="food">🥘</div>
+        <h3>Chole Bhature</h3>
+        <div class="price">₹49</div>
+
+        <button class="add"
+          onclick="addItem('Chole Bhature',49)">
+          + Add to Cart
+        </button>
       </div>
 
-      <div class="menu-card">
-        <div class="food-icon">🥪</div>
-        <div class="menu-info">
-          <h3>Cheese Grilled Sandwich</h3>
-          <div class="price">₹89</div>
-          <a class="order-small" href="https://wa.me/917999598093?text=Hello%2C%20mujhe%20Cheese%20Grilled%20Sandwich%20order%20karna%20hai.">Order →</a>
-        </div>
+
+      <div class="item">
+        <div class="food">🥪</div>
+        <h3>Cheese Grilled Sandwich</h3>
+        <div class="price">₹89</div>
+
+        <button class="add"
+          onclick="addItem('Cheese Grilled Sandwich',89)">
+          + Add to Cart
+        </button>
       </div>
 
     </div>
+
   </div>
+
 </section>
 
-<!-- ABOUT -->
-<section class="about" id="about">
+
+<!-- CART -->
+
+<section class="cart-section" id="cart">
+
   <div class="container">
 
-    <div class="section-title">
-      <h2>❤️ Braj Restaurant क्यों?</h2>
-      <p>आपके खाने का स्वाद और अनुभव हमारे लिए जरूरी है</p>
+    <div class="title">
+      <h2>🛒 आपका Cart</h2>
+      <p>Order भेजने से पहले अपना bill check करें</p>
+    </div>
+
+    <div class="cart-box">
+
+      <div id="cartItems">
+        <div class="empty">
+          आपका cart अभी खाली है 😋
+        </div>
+      </div>
+
+      <div class="total">
+        <h2>
+          Total: ₹<span id="total">0</span>
+        </h2>
+      </div>
+
+
+      <!-- CUSTOMER FORM -->
+
+      <form class="order-form" id="orderForm">
+
+        <input
+          type="text"
+          id="customerName"
+          placeholder="आपका नाम"
+          required
+        >
+
+        <input
+          type="tel"
+          id="customerPhone"
+          placeholder="Mobile Number"
+          pattern="[0-9]{10}"
+          maxlength="10"
+          required
+        >
+
+        <textarea
+          id="customerAddress"
+          placeholder="Delivery Address"
+          required></textarea>
+
+        <textarea
+          id="customerNote"
+          placeholder="Special instructions (optional)"></textarea>
+
+        <button class="order-btn" type="submit">
+          💬 Place Order on WhatsApp
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- QR CODE -->
+
+<section class="qr-section">
+
+  <div class="container">
+
+    <div class="title">
+      <h2>📱 Scan करके Order करें</h2>
+      <p>Restaurant पर यह QR Code लगाएँ</p>
+    </div>
+
+    <div class="qr-box">
+
+      <h3>🍽️ Braj Restaurant</h3>
+
+      <p>
+        QR Code Scan करें और सीधे Online Menu खोलें
+      </p>
+
+      <div id="qrcode"></div>
+
+      <p>
+        Agra Mohalla, Panna, Madhya Pradesh
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section>
+
+  <div class="container">
+
+    <div class="title">
+      <h2>❤️ हमारी खासियत</h2>
     </div>
 
     <div class="features">
@@ -586,66 +690,352 @@ footer p{
       <div class="feature">
         <div class="feature-icon">🌿</div>
         <h3>100% Pure Vegetarian</h3>
-        <p>हमारे यहाँ केवल शुद्ध शाकाहारी भोजन मिलता है।</p>
+        <p>शुद्ध शाकाहारी भोजन</p>
       </div>
 
       <div class="feature">
         <div class="feature-icon">✨</div>
         <h3>High Hygiene</h3>
-        <p>खाने की साफ-सफाई और hygiene का पूरा ध्यान।</p>
+        <p>साफ-सफाई का विशेष ध्यान</p>
       </div>
 
       <div class="feature">
-        <div class="feature-icon">🧹</div>
-        <h3>Neat & Clean</h3>
-        <p>साफ और आरामदायक tables तथा kitchen।</p>
+        <div class="feature-icon">🍽️</div>
+        <h3>Fresh Food</h3>
+        <p>ताजा और स्वादिष्ट भोजन</p>
       </div>
 
     </div>
+
   </div>
+
 </section>
+
 
 <!-- CONTACT -->
-<section id="contact">
+
+<section>
+
   <div class="container">
 
-    <div class="contact-box">
+    <div class="title">
 
-      <h2>📍 हमसे मिलें</h2>
+      <h2>📍 Braj Restaurant</h2>
 
-      <div class="contact-details">
-        <div>📍 <strong>Address:</strong> Agra Mohalla, Panna, Madhya Pradesh</div>
-        <div>📞 <strong>Phone:</strong> 7999598093</div>
-        <div>🕙 <strong>Timing:</strong> Daily 10:00 AM – 11:00 PM</div>
-      </div>
+      <p>
+        Agra Mohalla, Panna, Madhya Pradesh
+      </p>
 
-      <div class="buttons">
+      <p>
+        🕙 Daily 10:00 AM – 11:00 PM
+      </p>
 
-        <a href="tel:7999598093" class="btn btn-primary">
-          📞 Call Now
-        </a>
+      <br>
 
-        <a href="https://wa.me/917999598093?text=Hello%20Braj%20Restaurant%2C%20mujhe%20order%20karna%20hai."
-           class="btn btn-whatsapp">
-          💬 WhatsApp
-        </a>
-
-      </div>
+      <a
+        href="tel:7999598093"
+        class="btn btn-red">
+        📞 Call: 7999598093
+      </a>
 
     </div>
+
   </div>
+
 </section>
 
-<!-- FOOTER -->
+
 <footer>
 
-  <p><strong>Braj Restaurant</strong> 🍽️</p>
+  <p>
+    <strong>Braj Restaurant</strong> 🍽️
+  </p>
 
-  <p>Agra Mohalla, Panna, Madhya Pradesh</p>
-
-  <p>© 2026 Braj Restaurant. All Rights Reserved.</p>
+  <p>
+    © 2026 Braj Restaurant
+  </p>
 
 </footer>
+
+
+<!-- QR CODE LIBRARY -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+
+<script>
+
+let cart = [];
+
+
+/* ADD ITEM */
+
+function addItem(name, price){
+
+  const existing = cart.find(item => item.name === name);
+
+  if(existing){
+
+    existing.qty++;
+
+  }else{
+
+    cart.push({
+      name:name,
+      price:price,
+      qty:1
+    });
+
+  }
+
+  updateCart();
+
+  document.getElementById("cart").scrollIntoView({
+    behavior:"smooth"
+  });
+}
+
+
+/* CHANGE QUANTITY */
+
+function changeQty(index, amount){
+
+  cart[index].qty += amount;
+
+  if(cart[index].qty <= 0){
+
+    cart.splice(index,1);
+
+  }
+
+  updateCart();
+}
+
+
+/* UPDATE CART */
+
+function updateCart(){
+
+  const container =
+    document.getElementById("cartItems");
+
+  const count =
+    document.getElementById("cartCount");
+
+  const totalElement =
+    document.getElementById("total");
+
+
+  if(cart.length === 0){
+
+    container.innerHTML =
+      '<div class="empty">आपका cart अभी खाली है 😋</div>';
+
+    totalElement.innerText = "0";
+    count.innerText = "0";
+
+    return;
+  }
+
+
+  let total = 0;
+  let itemCount = 0;
+
+  container.innerHTML = "";
+
+
+  cart.forEach((item,index)=>{
+
+    const itemTotal =
+      item.price * item.qty;
+
+    total += itemTotal;
+    itemCount += item.qty;
+
+
+    const div =
+      document.createElement("div");
+
+    div.className = "cart-item";
+
+
+    div.innerHTML = `
+
+      <div class="cart-name">
+        ${item.name}
+        <br>
+        <small>₹${item.price} × ${item.qty}</small>
+      </div>
+
+      <div class="qty">
+
+        <button
+          type="button"
+          onclick="changeQty(${index},-1)">
+          −
+        </button>
+
+        <strong>${item.qty}</strong>
+
+        <button
+          type="button"
+          onclick="changeQty(${index},1)">
+          +
+        </button>
+
+      </div>
+
+      <strong>
+        ₹${itemTotal}
+      </strong>
+
+    `;
+
+    container.appendChild(div);
+
+  });
+
+
+  totalElement.innerText = total;
+  count.innerText = itemCount;
+}
+
+
+/* PLACE ORDER */
+
+document
+.getElementById("orderForm")
+.addEventListener("submit",function(e){
+
+  e.preventDefault();
+
+
+  if(cart.length === 0){
+
+    alert("पहले Cart में कोई item add करें।");
+    return;
+
+  }
+
+
+  const name =
+    document.getElementById("customerName").value.trim();
+
+  const phone =
+    document.getElementById("customerPhone").value.trim();
+
+  const address =
+    document.getElementById("customerAddress").value.trim();
+
+  const note =
+    document.getElementById("customerNote").value.trim();
+
+
+  if(phone.length !== 10){
+
+    alert("कृपया 10 digit mobile number डालें।");
+    return;
+
+  }
+
+
+  let message =
+    "🍽️ *NEW ORDER - BRAJ RESTAURANT*%0A%0A";
+
+
+  message +=
+    "*Customer:* " +
+    encodeURIComponent(name) +
+    "%0A";
+
+  message +=
+    "*Mobile:* " +
+    encodeURIComponent(phone) +
+    "%0A";
+
+  message +=
+    "*Address:* " +
+    encodeURIComponent(address) +
+    "%0A%0A";
+
+
+  message +=
+    "*ORDER DETAILS:*%0A";
+
+
+  let total = 0;
+
+
+  cart.forEach(item=>{
+
+    const itemTotal =
+      item.price * item.qty;
+
+    total += itemTotal;
+
+    message +=
+      "• " +
+      encodeURIComponent(item.name) +
+      " × " +
+      item.qty +
+      " = ₹" +
+      itemTotal +
+      "%0A";
+
+  });
+
+
+  message +=
+    "%0A*TOTAL BILL: ₹" +
+    total +
+    "*%0A";
+
+
+  if(note){
+
+    message +=
+      "%0A*Note:* " +
+      encodeURIComponent(note);
+
+  }
+
+
+  const whatsappNumber =
+    "917999598093";
+
+
+  const whatsappURL =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    message;
+
+
+  window.open(
+    whatsappURL,
+    "_blank"
+  );
+
+});
+
+
+/* QR CODE */
+
+const websiteURL =
+"https://aaryan977078.github.io/spice-garden-restaurant/";
+
+
+new QRCode(
+  document.getElementById("qrcode"),
+  {
+    text: websiteURL,
+    width:200,
+    height:200,
+    correctLevel:QRCode.CorrectLevel.H
+  }
+);
+
+</script>
 
 </body>
   </html>
